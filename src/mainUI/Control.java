@@ -11,7 +11,7 @@ public class Control {
 	Cls cls = new Cls();
 	Waiting waiting = new Waiting();
 
-	public void start() {
+	public void start() throws IOException {
 		try {
 			cls.screen(); // calling static method screen() to clear the cmd screen
 		} catch (Exception e) {
@@ -50,11 +50,7 @@ public class Control {
 				break;
 			case 2:
 				AdminLogin adlogin = new AdminLogin(sc);
-				try {
-					adlogin.login();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				adlogin.login();
 				break;
 
 			default:

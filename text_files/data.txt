@@ -1,5 +1,4 @@
 Username,Password,Phone_Number
-Shivam,
-rajdeep,
-hi,
-hello,
+
+Myself,Hello@3Admin,9876543211
+Shivam,Shivam@1233,1234556789

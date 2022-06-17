@@ -2,6 +2,8 @@ package src.admin;
 
 import src.mainUI.*;
 import src.clr.*;
+import src.data.show;
+
 import java.util.*;
 import java.io.*;
 import src.time.*;
@@ -46,7 +48,7 @@ public class loginf {
 
         System.out.println("\n\n\n\n\n\n\n");
         waiting.load(); // calling the method load() to print the loading message
-
+        show sh = new show();
         try {
             cls.screen();
         } catch (Exception e) {
@@ -67,6 +69,8 @@ public class loginf {
                 System.out.println("\t\t\t\t\t\t|                                                     |");
                 System.out.println("\t\t\t\t\t\t-------------------------------------------------------");
                 System.out.println("\nList of users: "); // print the list of all users
+                br.readLine();
+                br.readLine();
                 String line;
                 int i = 1;
                 while ((line = br.readLine()) != null){//prints usernames of all the users
@@ -98,8 +102,7 @@ public class loginf {
                 }
                 if(exist){
                     cls.screen();
-                    System.out.println("Completed");
-                    // sh.showme(select);
+                    sh.showData(select);
                 }
                 else
                 System.out.println("Wrong Username");

@@ -7,13 +7,12 @@ import src.data.*;
 import java.util.*;
 import java.io.*;
 import src.time.*;
-import src.user.*;
-import src.admin.*;
 
 public class Userlogin extends Control {
     Scanner sc;
-
+    
     public Userlogin(Scanner sc) {
+        super();
         this.sc = sc;
     }
 
@@ -44,7 +43,8 @@ public class Userlogin extends Control {
         System.out.println("\t\t\t\t\t\t\t-------------------------------------\n\n\n");
 
         System.out.println("Press 1, if you are existing user.\nPress 2, if you want to add new account.\n\n");
-        int u = sc.nextInt();
+        int u;
+        u = sc.nextInt();
         passver pc = new passver();
         namever nv = new namever();
         String uname, upass;
@@ -223,7 +223,7 @@ public class Userlogin extends Control {
                     break;
             }
         } while (d == 1 || d == 2 || d == 3 || d == 4);
-
+        sc.close();
     }
 
 }

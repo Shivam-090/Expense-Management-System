@@ -1,14 +1,10 @@
 package src.admin;
 
-import src.mainUI.*;
 import src.clr.*;
-import src.data.show;
-
+import src.data.*;
 import java.util.*;
 import java.io.*;
 import src.time.*;
-import src.user.*;
-import src.admin.*;
 
 public class loginf {
     public void log(String adusername, String adpass ) {

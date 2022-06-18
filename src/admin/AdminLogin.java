@@ -1,13 +1,13 @@
 package src.admin;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
-import src.clr.Cls;
-import src.mainUI.Control;
-import src.time.Waiting;
+import src.clr.*;
+import src.mainUI.*;
+import src.time.*;
 
 public class AdminLogin extends Control {
-    Scanner sc;
+    public Scanner sc;
     public AdminLogin(Scanner sc){
         this.sc = sc;
     }
@@ -37,11 +37,13 @@ public class AdminLogin extends Control {
         System.out.println("\t\t\t\t\t\t\t|                                   |");
         System.out.println("\t\t\t\t\t\t\t|                                   |");
         System.out.println("\t\t\t\t\t\t\t-------------------------------------\n\n\n");
-        
+        Console console = System.console();
+        String adusername;
         System.out.print("Enter the ID : ");
-        String adusername = sc.next();
+        adusername = sc.next();
         System.out.print("Enter Password : ");
-        String adpass = sc.next();
+        char[] adminpass = console.readPassword();
+        String adpass = String.valueOf(adminpass);
         login.log(adusername,adpass);
     }
 }

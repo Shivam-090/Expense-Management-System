@@ -1,8 +1,8 @@
-package src.time;
+package src.time; // Initializing Package
 
+// Importing other packages
 import java.util.concurrent.*;
-
-public class Waiting {
+public class Waiting { 
 	public void load() // function made to dispay the loading message
 	{
 		try {

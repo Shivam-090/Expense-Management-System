@@ -1,5 +1,6 @@
-package src.validations;
+package src.validations; // Initializing packages
 
+// Importing other packages
 import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -60,9 +61,10 @@ public class passver {
             return false;
     }
 
-    public boolean passgo(String a) throws IOException
-    {
-        boolean b,sc,lc,up,lp;//this is called in the program
+    public boolean passgo(String a) throws IOException 
+    { // function to check password for validations 
+
+        boolean b,sc,lc,up,lp;
         Properties prop = new Properties();
         FileInputStream input = null;
         try {

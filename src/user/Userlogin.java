@@ -1,5 +1,6 @@
-package src.user;
+package src.user; // Initializing package
 
+// Importing other packages
 import src.mainUI.*;
 import src.validations.*;
 import src.clr.*;
@@ -16,7 +17,7 @@ public class Userlogin extends Control {
         this.sc = sc;
     }
 
-    public void login() throws IOException {
+    public void login() throws IOException { // function to login user
         Cls cls = new Cls();
         Waiting waiting = new Waiting();
         try {
@@ -34,7 +35,7 @@ public class Userlogin extends Control {
             System.out.println(e);
         }
 
-        System.out.println("\n\n\n\n\n\n\t\t\t\t\t\t\t-------------------------------------");
+        System.out.println("\n\n\n\n\n\n\t\t\t\t\t\t\t-------------------------------------"); // User menu
         System.out.println("\t\t\t\t\t\t\t|                                   |");
         System.out.println("\t\t\t\t\t\t\t|                                   |");
         System.out.println("\t\t\t\t\t\t\t|            USER PORTAL            |");
@@ -49,14 +50,14 @@ public class Userlogin extends Control {
         namever nv = new namever();
         String uname, upass;
         switch (u) {
-            case 1:
+            case 1: // If user already exists
                 System.out.println("Enter Your Existing Username : ");
                 String username = sc.next();
                 System.out.println("Enter Your Existing Password : ");
                 String password = sc.next();
                 verifyUser(username, password);
                 break;
-            case 2:
+            case 2: // If new user
                 do {
                     System.out.println("\nEnter Your New Username : ");
                     uname = sc.next();
@@ -78,7 +79,7 @@ public class Userlogin extends Control {
         }
     }
 
-    public void verifyUser(String username, String password) {
+    public void verifyUser(String username, String password) { // function to verify user if already exists or not
         int found = 0;
         try {
             FileReader fr = new FileReader("C:\\Users\\HP\\Desktop\\Project\\text_files\\data.txt");
@@ -102,7 +103,7 @@ public class Userlogin extends Control {
         }
     }
 
-    public void createUser(String uname, String upass) throws IOException {
+    public void createUser(String uname, String upass) throws IOException { // function to create new user
         String phoneno;
         try {
             boolean exist = false;
@@ -124,11 +125,11 @@ public class Userlogin extends Control {
                     exist = true;
                 }
             }
-            fr.close();
+            fr.close(); // closing file
             if (!exist) {
                 System.out.println("\nUser already exists!!! Try again!! ");
             } else {
-                cr.fcreate(uname);
+                cr.fcreate(uname); // Initializing fcreate() to create new user (folder)
                 File fir = new File("C:\\Users\\HP\\Desktop\\Project\\text_files\\data.txt");
                 FileWriter fw = new FileWriter(fir, true);
                 fw.write("\n" + uname + "," + upass + "," + phoneno);
@@ -140,7 +141,7 @@ public class Userlogin extends Control {
         login();
     }
 
-    public void UserChoices(String username) {
+    public void UserChoices(String username) { // Function UserChoices() to select data
         Cls cls = new Cls();
         Waiting waiting = new Waiting();
         try {
@@ -158,6 +159,7 @@ public class Userlogin extends Control {
             System.out.println(e);
         }
 
+        // Initializing data
         add add = new add();
         delete del = new delete();
         update up = new update();

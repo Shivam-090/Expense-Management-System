@@ -1,12 +1,13 @@
-package src.validations;
+package src.validations; // Initializing package
 
+// Importing other packages
 import src.exceptions.*;
 import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.io.*;
 
-public class namever {
+public class namever { 
 
     boolean spachk(String s) throws spaceusername {// there shouldn't be any space in the username
         boolean a = false;
@@ -55,7 +56,7 @@ public class namever {
         Properties prop = new Properties();
         FileInputStream input = null;
         try {
-            input = new FileInputStream("C:\\Users\\HP\\Desktop\\Project\\configs\\constants\\exceptions.properties");
+            input = new FileInputStream("C:\\Users\\HP\\Desktop\\Project\\configs\\constants\\exceptions.properties"); // file to display error messages
             prop.load(input);
             b = emtuname(a);
             sc = specialCharacter(a);

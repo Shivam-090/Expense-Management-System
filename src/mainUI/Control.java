@@ -1,5 +1,6 @@
-package src.mainUI;
+package src.mainUI; // Initializing package
 
+// Importing packages
 import src.time.*;
 import src.user.*;
 import src.admin.*;
@@ -7,7 +8,7 @@ import src.clr.*;
 import java.io.*;
 import java.util.*;
 
-public class Control {
+public class Control { 
 	Cls cls = new Cls();
 	Waiting waiting = new Waiting();
 
@@ -27,6 +28,8 @@ public class Control {
 			System.out.println(e);
 		}
 		System.out.println("\n\n\n");
+
+		// Main Menu
 		System.out.println("\t\t\t\t\t\t-------------------------------------------------------");
 		System.out.println("\t\t\t\t\t\t|                                                     |");
 		System.out.println("\t\t\t\t\t\t|                                                     |");
@@ -46,15 +49,15 @@ public class Control {
 		switch (input) {
 			case 1:
 				Userlogin uslogin = new Userlogin(sc);
-				uslogin.login();
+				uslogin.login(); // Redirects to user login 
 				break;
 			case 2:
 				AdminLogin adlogin = new AdminLogin(sc);
-				adlogin.login();
+				adlogin.login(); // Redirects to admin login
 				break;
 
 			default:
-				System.out.println("Input Value is Wrong!");
+				System.out.println("Input Value is Wrong!"); // Default printing statement
 				break;
 		}
 

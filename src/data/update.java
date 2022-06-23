@@ -1,12 +1,13 @@
-package src.data;
+package src.data; // Initializing packages
 
+// Importing packages
 import java.util.*;
 import java.io.*;
 import src.clr.*;
 
 public class update {
 
-    public void updateData(String username) {
+    public void updateData(String username) { // updateData() function
         try {
             Cls cls = new Cls();
             cls.screen(); // calling the screen function to clear the screen of cmd
@@ -22,8 +23,8 @@ public class update {
         String newitem;
         Scanner sc = new Scanner(System.in);
         try {
-            FileReader fr = new FileReader(old);
-            BufferedReader br = new BufferedReader(fr);
+            FileReader fr = new FileReader(old); // Initializing file
+            BufferedReader br = new BufferedReader(fr); // Attaching with bufferedreader
             FileWriter fw = new FileWriter(temp, true);
             String s;
 
@@ -46,7 +47,6 @@ public class update {
         do {
             n = sc.nextInt();
             if (n == 0 || n > count) {
-
                 System.out.print(count + "\nERROR! \nEnter a valid item number you want to update: ");
                 // until the user enters a number in range this will show this error
             }

@@ -1,4 +1,6 @@
-package src.validations;
+package src.validations; // Initailizing package
+
+// importing packages
 import src.exceptions.*;
 import java.util.Properties;
 import java.util.regex.Matcher;
@@ -6,7 +8,7 @@ import java.util.regex.Pattern;
 import java.io.*;
 
 public class numver {
-    public boolean numgo(String num) throws numchkcharec, numchkdigi, IOException {
+    public boolean numgo(String num) throws numchkcharec, numchkdigi, IOException { // function to check num only  
         Properties prop = new Properties();
         FileInputStream input = null;
         try {

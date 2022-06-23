@@ -1,18 +1,20 @@
-package src.data;
+package src.data; // Initializing package
 
+// Importing packages
 import java.util.*;
 import java.io.*;
 import src.clr.*;
 
 public class delete {
 
-    public void deleteData(String username) {
+    public void deleteData(String username) { // delete() function
         try {
             Cls cls = new Cls();
             cls.screen(); // calling the screen function to clear the screen of cmd
         } catch (Exception e) {
             System.out.println(e);
         }
+
         show sh = new show();
         File temp = new File("text_files/users/" + username + "/temp.txt");// we copy every line of the user file into this file
         File old = new File("text_files/users/" + username + "/daily.txt");// this is the original file for the user

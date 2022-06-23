@@ -1,12 +1,13 @@
-package src.data;
+package src.data; //Initializing package
 
+// Importing packages
 import java.util.*;
 import src.clr.*;
 import java.io.*;
 
 public class show {
 
-    public void showData(String username) {
+    public void showData(String username) { // showData() function
         try {
             try {
                 Cls cls = new Cls();
@@ -17,7 +18,7 @@ public class show {
             String filepath= "text_files/users/" + username + "/daily.txt";//this is the users data file that gets updated
             File file = new File("C:\\Users\\HP\\Desktop\\Project\\text_files\\users\\daily_expense.txt");//this is a common file for every user
             // we copy every thing to this file the txt file but un the format of a table so that it is presentable
-            FileWriter fw = new FileWriter(file);
+            FileWriter fw = new FileWriter(file); 
             double x = 0.0;
             int i=0;
             String am;

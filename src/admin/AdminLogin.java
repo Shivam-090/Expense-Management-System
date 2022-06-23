@@ -9,9 +9,11 @@ import src.time.*;
 
 public class AdminLogin extends Control {
     public Scanner sc; // Initialize scanner object
-    public AdminLogin(Scanner sc){ // calling default constructor for object.
+
+    public AdminLogin(Scanner sc) { // calling default constructor for object.
         this.sc = sc;
     }
+
     public void login() throws IOException {
         Cls cls = new Cls(); // importing cls file for screen function
         Waiting waiting = new Waiting(); // waiting file for loading page
@@ -30,7 +32,7 @@ public class AdminLogin extends Control {
         } catch (Exception e) {
             System.out.println(e);
         }
-        
+
         System.out.println("\n\n\n\n\n\n\t\t\t\t\t\t\t-------------------------------------"); // Admin Menu
         System.out.println("\t\t\t\t\t\t\t|                                   |");
         System.out.println("\t\t\t\t\t\t\t|                                   |");
@@ -45,6 +47,6 @@ public class AdminLogin extends Control {
         System.out.print("Enter Password : ");
         char[] adminpass = console.readPassword();
         String adpass = String.valueOf(adminpass); // Initializing variable for admin password
-        login.log(adusername,adpass); // Passing values of username and password to method.
+        login.log(adusername, adpass); // Passing values of username and password to method.
     }
 }
